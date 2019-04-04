@@ -1,3 +1,6 @@
+// Load .env file if present
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Goodlift Tools`,
