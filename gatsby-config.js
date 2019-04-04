@@ -41,7 +41,7 @@ module.exports = {
           {
             baseId: process.env.AIRTABLE_BASE_ID,
             tableName: process.env.AIRTABLE_TABLE_NAME,
-            // tableView: process.env.AIRTABLE_VIEW_NAME, // optional
+            tableView: process.env.AIRTABLE_VIEW_NAME, // optional
             // queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`, // optional
             mapping: {
               // 'Description': 'text/markdown',
