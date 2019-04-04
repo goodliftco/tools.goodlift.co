@@ -119,5 +119,5 @@ export const pageQuery = graphql`
 //   }
 // `;
 
-let checkBlank = value => (value ? value : `--`);
-let checkBlankTime = value => (value ? `${value}m` : `--`);
+// let checkBlank = value => (value ? value : `--`);
+// let checkBlankTime = value => (value ? `${value}m` : `--`);
