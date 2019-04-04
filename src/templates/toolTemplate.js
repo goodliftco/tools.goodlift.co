@@ -24,14 +24,14 @@ class SimpleTool extends React.Component {
                 </ul>
               </nav>
               <div className="card">
-                {tool.data.Attachments &&
-                  tool.data.Attachments.localFiles !== 0 ? (
+                {tool.data.Images &&
+                  tool.data.Images.localFiles !== 0 ? (
                     <div className="card-image">
                       <figure className="image">
                         <Img
                           alt="Tool"
                           fluid={
-                            tool.data.Attachments.localFiles[0].childImageSharp
+                            tool.data.Images.localFiles[0].childImageSharp
                               .fluid
                           }
                         />
@@ -51,67 +51,8 @@ class SimpleTool extends React.Component {
                   <h2 className="title has-text-centered">
                     {tool.data.Name}
                   </h2>
-                  <div className="level">
-                    <div className="level-item has-text-centered">
-                      <div>
-                        <p className="heading">Rating</p>
-                        <p className="">
-                          {checkBlank(tool.data.Rating)}
-                          {`\u2606`}
-                          /10
-                        </p>
-                      </div>
-                    </div>
-                    <div className="level-item has-text-centered">
-                      <div>
-                        <p className="heading">Last Made</p>
-                        <p className="">{checkBlank(tool.data.Last_Made)}</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="level">
-                    <div className="level-item has-text-centered">
-                      <div>
-                        <p className="heading">Prep Time</p>
-                        <p className="">{`Prep: ${checkBlankTime(
-                          tool.data.Preparation_Time
-                        )}`}</p>
-                      </div>
-                    </div>
-                    <div className="level-item has-text-centered">
-                      <div>
-                        <p className="heading">Cook Time</p>
-                        <p className="">{`Cooking: ${checkBlankTime(
-                          tool.data.Cooking_Time
-                        )}`}</p>
-                      </div>
-                    </div>
-                    <div className="level-item has-text-centered">
-                      <div>
-                        <p className="heading">Total Time</p>
-                        <p className="">{`Total: ${checkBlankTime(
-                          tool.data.Total_Time
-                        )}`}</p>
-                      </div>
-                    </div>
-                  </div>
                   <div className="content">
-                    <h2 className="title">Ingredients</h2>
-                    <div>
-                      <ul>
-                        {tool.data.Ingredients.split(`\n`).map(
-                          (ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                          )
-                        )}
-                      </ul>
-                    </div>
-                    <h2 className="title">Directions</h2>
-                    {tool.data.Directions.split(`\n`).map(
-                      (direction, index) => (
-                        <p key={index}>{direction}</p>
-                      )
-                    )}
+                      {tool.data.Description}
                   </div>
                 </div>
                 {tool.data.URL ? (
